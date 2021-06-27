@@ -1,0 +1,54 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 mt=10 text-gray-800">Product</h1>
+   <a routerLink="/productcreate" class="d-none d-sm-inline-block mt-5 ml-5 btn btn-sm btn-primary shadow-sm">
+<i class="fas fa-download fa-sm text-white">Create Product</i></a>
+</div>
+ <!-- DataTales Example -->
+ <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Product table</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>Action</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr *ngFor="let product of productList">
+                        <td >
+                            <a [routerLink]="['/productview',product.id]" >{{product.productname}}</a></td>
+                        <td>{{product.productPrice}}</td>
+                        <td>{{product.discount}}</td>
+                        <td>{{product.type}}</td>
+                        <td>2011/04/25</td>
+                        <td>
+                            <a [routerLink]="['/productedit',product.id]">Edit</a> | 
+                            <a href="product" (click)=" deleteForm()">Delete</a>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
