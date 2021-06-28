@@ -16,6 +16,7 @@ import { UserEditComponent } from './user-edit/user-edit.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { UserComponent } from './user/user.component';
     UserEditComponent,
     SidebarComponent,
     UserComponent,
+    LoginComponent,
  
   ],
   imports: [

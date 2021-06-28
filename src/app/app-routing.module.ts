@@ -9,10 +9,15 @@ import { UserCreateComponent } from './user-create/user-create.component';
 import { UserComponent } from './user/user.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { UserViewComponent } from './user-view/user-view.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
-    path : "",
+    path: "login",
+    component: LoginComponent
+  },
+  {
+    path : "dashboard",
     component : DashboardComponent
   },
 
