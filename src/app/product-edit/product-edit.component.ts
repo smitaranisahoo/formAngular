@@ -16,6 +16,7 @@ export class ProductEditComponent implements OnInit {
   currentproductData: any;
   constructor(private productService:ProductService,private activatedRoute:ActivatedRoute, private route:Router) {
     this.currentId = this.activatedRoute.snapshot.params.id;
+    console.log(this.currentId)
    }
 
   ngOnInit(): void {

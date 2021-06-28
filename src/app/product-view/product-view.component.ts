@@ -12,7 +12,6 @@ export class ProductViewComponent implements OnInit {
   currentProduct:any;
   currentId:any;
   productLists:any;
-
   currentproductData: any;
   constructor(private productService:ProductService,private activatedRoute:ActivatedRoute) { 
     this.currentId = this.activatedRoute.snapshot.params.id;
