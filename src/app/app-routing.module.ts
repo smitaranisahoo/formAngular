@@ -10,6 +10,8 @@ import { UserComponent } from './user/user.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { UserViewComponent } from './user-view/user-view.component';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './auth.guard';
+import { ContainerComponent } from './container/container.component';
 
 const routes: Routes = [
   {
@@ -17,43 +19,53 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path : "dashboard",
-    component : DashboardComponent
+    path: "container",
+    component: ContainerComponent,
+    canActivate: [AuthGuard],
+    children :[
+      {
+        path : "dashboard",
+        component : DashboardComponent,
+       
+      },
+    
+      {
+        path : "product",
+        component : ProductComponent
+      },
+    
+      {
+        path : "productedit/:id",
+        component : ProductEditComponent
+      },
+      {
+        path : "productview/:id",
+        component : ProductViewComponent
+      },
+      {
+        path : "productcreate",
+        component : ProductCreateComponent
+      },
+      {
+        path : "user",
+        component : UserComponent
+      },
+      {
+        path : "usercreate",
+        component : UserCreateComponent
+      },
+      {
+        path : "useredit/:id",
+        component : UserEditComponent
+      },
+      {
+        path : "userview/:id",
+        component : UserViewComponent
+      }
+    ]
   },
 
-  {
-    path : "product",
-    component : ProductComponent
-  },
-
-  {
-    path : "productedit/:id",
-    component : ProductEditComponent
-  },
-  {
-    path : "productview/:id",
-    component : ProductViewComponent
-  },
-  {
-    path : "productcreate",
-    component : ProductCreateComponent
-  },
-  {
-    path : "user",
-    component : UserComponent
-  },
-  {
-    path : "usercreate",
-    component : UserCreateComponent
-  },
-  {
-    path : "useredit/:id",
-    component : UserEditComponent
-  },
-  {
-    path : "userview/:id",
-    component : UserViewComponent
-  }
+  
 ];
 
 @NgModule({

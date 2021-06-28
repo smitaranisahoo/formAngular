@@ -17,6 +17,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
 import { LoginComponent } from './login/login.component';
+import { ContainerComponent } from './container/container.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { LoginComponent } from './login/login.component';
     SidebarComponent,
     UserComponent,
     LoginComponent,
+    ContainerComponent,
  
   ],
   imports: [

@@ -15,6 +15,6 @@ export class LoginComponent implements OnInit {
   }
   login() {
     window.localStorage.setItem("authtoken","123");
-    this.route.navigate(['dashboard'])
+    this.route.navigate(['container'])
     }
 }
